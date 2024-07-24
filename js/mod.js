@@ -1,13 +1,13 @@
 let modInfo = {
-	name: "The ??? Tree",
-	id: "mymod",
-	author: "nobody",
-	pointsName: "points",
+	name: "Forest Village",
+	id: "villagetree",
+	author: "NatiM6",
+	pointsName: "population",
 	modFiles: ["layers.js", "tree.js"],
 
-	discordName: "",
+	discordName: "natim6",
 	discordLink: "",
-	initialStartPoints: new Decimal (10), // Used for hard resets and new players
+	initialStartPoints: new Decimal (0), // Used for hard resets and new players
 	offlineLimit: 1,  // In hours
 }
 
@@ -34,7 +34,7 @@ function getStartPoints(){
 
 // Determines if it should show points/sec
 function canGenPoints(){
-	return true
+	return false
 }
 
 // Calculate points/sec!
@@ -52,11 +52,12 @@ function addedPlayerData() { return {
 
 // Display extra things at the top of the page
 var displayThings = [
+	
 ]
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.gte(new Decimal("e280000000"))
+	return false // player.points.gte(new Decimal("e280000000"))
 }
 
 
